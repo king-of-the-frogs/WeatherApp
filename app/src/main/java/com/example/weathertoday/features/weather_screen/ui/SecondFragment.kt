@@ -3,9 +3,11 @@ package com.example.weathertoday.features.weather_screen.ui
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.example.weathertoday.R
 import com.example.weathertoday.base.viewBinding
+import com.example.weathertoday.databinding.FragmentSecondBinding
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import java.text.SimpleDateFormat
 import java.util.*
@@ -43,3 +45,5 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
     }
 
 }
+
+

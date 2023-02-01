@@ -6,8 +6,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.weathertoday.R
 import com.example.weathertoday.base.viewBinding
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import com.example.weathertoday.databinding.FragmentMainBinding
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
