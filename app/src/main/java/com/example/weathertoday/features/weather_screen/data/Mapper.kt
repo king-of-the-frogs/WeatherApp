@@ -12,7 +12,8 @@ fun MainWeatherRemoteModel.mainToDomain() = MainModel(
     tempMax = this.main.tempMax,
     tempMin = this.main.tempMin,
     pressure = this.main.pressure,
-    humidity = this.main.humidity
+    humidity = this.main.humidity,
+    feelsLike = this.main.feelsLike,
 )
 
 fun MainWeatherRemoteModel.windToDomain() = WindModel(

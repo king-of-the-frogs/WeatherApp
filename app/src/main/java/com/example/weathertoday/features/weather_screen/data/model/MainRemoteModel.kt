@@ -9,6 +9,8 @@ data class MainRemoteModel(
     val tempMax: Float,
     @SerializedName("temp_min")
     val tempMin: Float,
+    @SerializedName("feels_like")
+    val feelsLike: Float,
     @SerializedName("humidity")
     val humidity: Long,
     @SerializedName("pressure")

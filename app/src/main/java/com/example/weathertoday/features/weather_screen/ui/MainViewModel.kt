@@ -22,7 +22,8 @@ class MainViewModel(val iteractor: WeatherIteractor) : BaseViewModel<ViewState>(
             sunset = 0,
             sunrise = 0,
             date = 0,
-            isLoading = false
+            isLoading = false,
+            feelsLike = 0f,
         )
 
     override fun reduce(event: Event, previousState: ViewState): ViewState? {
@@ -44,15 +45,16 @@ class MainViewModel(val iteractor: WeatherIteractor) : BaseViewModel<ViewState>(
             is DataEvent.OnWeatherSucceed -> {
                 return previousState.copy(
                     temp = event.data.main.temp,
-                    tempMax = event.data.main.tempMax,
                     speed = event.data.wind.speed,
+                    tempMax = event.data.main.tempMax,
                     tempMin = event.data.main.tempMin,
+                    feelsLike = event.data.main.feelsLike,
                     pressure = event.data.main.pressure,
                     humidity = event.data.main.humidity,
                     sunset = event.data.sys.sunset,
                     sunrise = event.data.sys.sunrise,
                     date = event.data.date,
-                    isLoading = true
+                    isLoading = true,
                 )
             }
             else -> return null

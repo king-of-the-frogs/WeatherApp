@@ -5,5 +5,4 @@ import com.example.weathertoday.features.weather_screen.domain.model.MainWeather
 interface WeatherRepo {
 
     suspend fun getWeather(city: String): MainWeatherModel
-
 }

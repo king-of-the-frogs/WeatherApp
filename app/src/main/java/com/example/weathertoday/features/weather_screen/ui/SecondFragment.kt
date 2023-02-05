@@ -31,6 +31,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         binding.temp.text = "${viewState.temp} °C"
         binding.tempMax.text = "${viewState.tempMax} °C"
         binding.tempMin.text = "${viewState.tempMin} °C"
+        binding.feelsLike.text = "${viewState.tempMin} °C"
         binding.wind.text = viewState.speed.toString()
         binding.pressure.text = viewState.pressure.toString()
         binding.humidity.text = viewState.humidity.toString()
@@ -38,10 +39,8 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
             SimpleDateFormat("hh:mm a", Locale.UK).format(Date(viewState.sunrise * 1000))
         binding.sunset.text =
             SimpleDateFormat("hh:mm a", Locale.UK).format(Date(viewState.sunset * 1000))
-        binding.updatedAt.text = SimpleDateFormat(
-            "dd/MM/yyyy hh:mm a",
-            Locale.ENGLISH
-        ).format(Date(viewState.date * 1000))
+        binding.updatedAt.text =
+            SimpleDateFormat("dd/MM/yyyy hh:mm a", Locale.ENGLISH).format(Date(viewState.date * 1000))
     }
 
 }

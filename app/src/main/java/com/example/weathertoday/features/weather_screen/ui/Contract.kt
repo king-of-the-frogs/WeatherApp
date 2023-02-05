@@ -3,10 +3,11 @@ package com.example.weathertoday.features.weather_screen.ui
 import com.example.weathertoday.base.Event
 import com.example.weathertoday.features.weather_screen.domain.model.MainWeatherModel
 
-data class ViewState (
+data class ViewState(
     val temp: Float,
     val tempMax: Float,
     val tempMin: Float,
+    val feelsLike: Float,
     val pressure: Long,
     val humidity: Long,
     val sunrise: Long,
@@ -14,7 +15,8 @@ data class ViewState (
     val date: Long,
     val speed: Float,
     val isLoading: Boolean,
-    var city: String
+    var city: String,
+
 )
 
 sealed class DataEvent: Event {

@@ -6,5 +6,6 @@ data class MainModel(
     val tempMin: Float,
     val humidity: Long,
     val pressure: Long,
+    val feelsLike: Float,
 )
 
