@@ -14,6 +14,6 @@
     <string name="wind">Wind</string>
     <string name="pressure">Pressure</string>
     <string name="humidity">Humidity</string>
-    <string name="nmy">NMY</string>
+    <string name="kof">KOF</string>
     <string name="created_by">Created By</string>
 </resources>
