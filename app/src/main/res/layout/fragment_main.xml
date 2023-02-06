@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_bg"
-    android:backgroundTint="@color/ic_launcher_background"
-    tools:context=".features.weather_screen.ui.MainFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.weather_screen.ui.MainActivity"
+    android:background="@drawable/gradient_bg">
+
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="171dp"
+        android:src="@drawable/app"
+        app:layout_constraintBottom_toTopOf="@+id/etStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.568"
+        app:tint="@color/black"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/etStart"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_width="290dp"
+        android:layout_height="53dp"
         android:hint="@string/name_city"
         android:textAlignment="gravity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457" />
 
     <Button
         android:id="@+id/btnStart"
-        android:layout_width="92dp"
-        android:layout_height="37dp"
-        android:background="@color/black"
-        android:backgroundTint="@color/black"
+        android:layout_width="107dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#240B7E"
         android:backgroundTintMode="add"
-        android:text="@string/start"
+        android:text="@string/search"
+        android:textColor="@color/black"
         android:visibility="visible"
-        app:iconTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etStart"
-        app:layout_constraintVertical_bias="0.118"
-        app:strokeColor="#FB2C2C" />
+        app:layout_constraintVertical_bias="0.027" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

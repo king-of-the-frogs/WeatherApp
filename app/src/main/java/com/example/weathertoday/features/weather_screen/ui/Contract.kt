@@ -23,6 +23,7 @@ sealed class DataEvent: Event {
     object WeatherLoaded: DataEvent()
     data class OnWeatherSucceed(val data: MainWeatherModel) : DataEvent()
 }
+
 sealed class UiEvent: Event {
     data class LoadWeatherFromCity(val city: String): UiEvent()
 

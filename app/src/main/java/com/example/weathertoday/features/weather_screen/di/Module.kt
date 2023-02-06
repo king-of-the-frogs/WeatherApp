@@ -12,16 +12,17 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-const val API_KEY = "5f3e74caa31e4586e2cb64ded566bd82"
+const val API_KEY = "1f82352874e7d7921d10f7b46f4f2aeb"
 const val BASE_URL = "https://api.openweathermap.org/data/2.5/"
 val weatherScreenModule = module {
 
-    single<OkHttpClient> { OkHttpClient.
-    Builder().
-    build()
+    single<OkHttpClient> { OkHttpClient
+        .Builder()
+        .build()
     }
 
-    single<Retrofit> {  Retrofit.Builder()
+    single<Retrofit> {  Retrofit
+        .Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .client(get<OkHttpClient>())

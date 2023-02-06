@@ -13,9 +13,10 @@ class MainViewModel(val iteractor: WeatherIteractor) : BaseViewModel<ViewState>(
     override fun initialViewState(): ViewState =
         ViewState(
             temp = 0f,
-            tempMax = 0f,
             speed = 0f,
+            tempMax = 0f,
             tempMin = 0f,
+            feelsLike = 0f,
             pressure = 0,
             city = "",
             humidity = 0,
@@ -23,7 +24,6 @@ class MainViewModel(val iteractor: WeatherIteractor) : BaseViewModel<ViewState>(
             sunrise = 0,
             date = 0,
             isLoading = false,
-            feelsLike = 0f,
         )
 
     override fun reduce(event: Event, previousState: ViewState): ViewState? {
@@ -58,6 +58,7 @@ class MainViewModel(val iteractor: WeatherIteractor) : BaseViewModel<ViewState>(
                 )
             }
             else -> return null
+
         }
     }
 }

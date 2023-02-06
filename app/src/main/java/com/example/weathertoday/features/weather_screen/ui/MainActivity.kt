@@ -1,7 +1,6 @@
 package com.example.weathertoday.features.weather_screen.ui
 
 import android.os.Bundle
-
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.weathertoday.R
