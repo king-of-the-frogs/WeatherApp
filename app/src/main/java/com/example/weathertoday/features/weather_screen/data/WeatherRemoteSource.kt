@@ -4,6 +4,6 @@ import com.example.weathertoday.features.weather_screen.data.model.MainWeatherRe
 
 class WeatherRemoteSource(private val api: WeatherApi) {
 
-        suspend fun getWeather(city: String): MainWeatherRemoteModel = api.getWeather(query =   city)
-
+        suspend fun getWeather(city: String): MainWeatherRemoteModel =
+                api.getWeather(query = city)
 }

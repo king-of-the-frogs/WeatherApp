@@ -2,5 +2,5 @@
 <font-family xmlns:app="http://schemas.android.com/apk/res-auto"
     app:fontProviderAuthority="com.google.android.gms.fonts"
     app:fontProviderPackage="com.google.android.gms"
-    app:fontProviderQuery="Alex Brush">
+    app:fontProviderQuery="Oswald">
 </font-family>

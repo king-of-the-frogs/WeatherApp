@@ -7,5 +7,4 @@ class WeatherRepoImpl(private val weatherRemoteSource: WeatherRemoteSource) : We
     override suspend fun getWeather(city: String): MainWeatherModel {
         return weatherRemoteSource.getWeather(city = city).toDomain()
     }
-
 }

@@ -2,10 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_bg"
-    android:backgroundTint="@color/ic_launcher_background"
+    android:background="@drawable/gradient_bg2"
     android:foregroundTint="@color/grey"
     android:orientation="vertical"
     android:padding="25dp"
@@ -15,7 +14,7 @@
         android:id="@+id/mainContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/ic_launcher_background"
+        android:background="@drawable/gradient_bg2"
         android:visibility="visible">
 
         <LinearLayout
@@ -29,12 +28,14 @@
                 android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/blue2"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/updated_at"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/blue2"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -52,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/clear_sky"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <TextView
@@ -60,6 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-thin"
+                android:textColor="@color/black"
                 android:textSize="75sp" />
 
             <LinearLayout
@@ -71,7 +74,8 @@
                 <TextView
                     android:id="@+id/temp_min"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textColor="#0F0435" />
 
                 <Space
                     android:layout_width="50dp"
@@ -80,7 +84,8 @@
                 <TextView
                     android:id="@+id/temp_max"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textColor="#0F0435" />
             </LinearLayout>
 
         </LinearLayout>
@@ -100,10 +105,48 @@
                 android:weightSum="3">
 
                 <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#22038E"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/wind"
+                        app:tint="@color/black" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Wind"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/wind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#1EEFAA"
+                    android:background="#22038E"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="8dp">
@@ -112,7 +155,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/sunrise"
-                        app:tint="#210158" />
+                        app:tint="@color/black" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -122,12 +165,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/sunrise"
+                        android:textColor="@color/black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/sunrise"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -139,7 +184,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#1EEFAA"
+                    android:background="#22038E"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="8dp">
@@ -148,7 +193,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/sunset"
-                        app:tint="#210158" />
+                        app:tint="@color/black" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -158,48 +203,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/sunset"
+                        android:textColor="@color/black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/sunset"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#1EEFAA"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/wind"
-                        app:tint="#210158" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/wind"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/wind"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -218,7 +229,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#1EEFAA"
+                    android:background="#22038E"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="8dp">
@@ -227,7 +238,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/pressure"
-                        app:tint="#210158" />
+                        app:tint="@color/black" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -237,12 +248,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/pressure"
+                        android:textColor="@color/black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/pressure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -251,19 +264,19 @@
                     android:layout_height="wrap_content" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="46dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#1EEFAA"
+                    android:background="#22038E"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="5dp">
+                    android:padding="8dp">
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@drawable/app"
-                        app:tint="#210158" />
+                        app:tint="@color/black" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -272,13 +285,15 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/created_by"
+                        android:text="@string/feels_like"
+                        android:textColor="@color/black"
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/feels_like"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/kof"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -290,7 +305,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#1EEFAA"
+                    android:background="#22038E"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="8dp">
@@ -299,7 +314,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/humidity"
-                        app:tint="#210158" />
+                        app:tint="@color/black" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -309,12 +324,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/humidity"
+                        android:textColor="@color/black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/humidity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
