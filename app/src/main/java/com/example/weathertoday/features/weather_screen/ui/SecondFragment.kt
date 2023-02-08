@@ -10,7 +10,11 @@ import com.example.weathertoday.base.viewBinding
 import com.example.weathertoday.databinding.FragmentSecondBinding
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import java.text.SimpleDateFormat
+import java.time.ZoneId
+import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
 import java.util.*
+
 
 class SecondFragment : Fragment(R.layout.fragment_second) {
 
@@ -24,7 +28,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "NewApi")
     private fun render(viewState: ViewState) {
         binding.loader.isVisible = !viewState.isLoading
         binding.address.text = viewState.city
@@ -41,6 +45,10 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
             SimpleDateFormat("hh:mm a", Locale.UK).format(Date(viewState.sunset * 1000))
         binding.updatedAt.text =
             SimpleDateFormat("dd/MM/yyyy hh:mm a", Locale.ENGLISH).format(Date(viewState.date * 1000))
+//        binding.timezone.text =
+//            DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss").ZonedDateTime.now(ZoneId.of(viewState.city))
+        binding.timeZone.text =
+            DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a")ZonedDateTime.now(ZoneId.of(viewState.timeZone)).format(Long)
     }
 
 }

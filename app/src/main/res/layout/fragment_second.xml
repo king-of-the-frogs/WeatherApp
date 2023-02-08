@@ -37,6 +37,12 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/blue2"
                 android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timeZone"
+                android:textSize="14sp"
+                android:textColor="@color/blue2"/>
         </LinearLayout>
 
 

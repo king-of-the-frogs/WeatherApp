@@ -4,6 +4,7 @@ import com.example.weathertoday.base.Event
 import com.example.weathertoday.features.weather_screen.domain.model.MainWeatherModel
 
 data class ViewState(
+
     val temp: Float,
     val tempMax: Float,
     val tempMin: Float,
@@ -16,6 +17,7 @@ data class ViewState(
     val speed: Float,
     val isLoading: Boolean,
     var city: String,
+    val timeZone: Long,
 
 )
 

@@ -2,9 +2,9 @@ package com.example.weathertoday.features.weather_screen.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class  WindRemoteModel(
+data class TimeZoneRemoteModel (
 
-    @SerializedName("speed")
-    val speed: Float,
+    @SerializedName("time_zone")
+    val timeZone: Float,
 
 )
