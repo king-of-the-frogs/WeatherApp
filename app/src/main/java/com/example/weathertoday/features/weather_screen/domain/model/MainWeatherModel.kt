@@ -6,6 +6,6 @@ data class MainWeatherModel(
     val wind: WindModel,
     val sys: SysModel,
     val date: Long,
-    val timeZone: TimeZoneModel,
+    val timeZone: Int,
 
 )

@@ -13,6 +13,6 @@ data class MainWeatherRemoteModel(
     @SerializedName("dt")
     val date: Long,
     @SerializedName("timezone")
-    val timezone: TimeZoneRemoteModel
+    val timezone: Int,
 
 )

@@ -17,9 +17,9 @@ data class ViewState(
     val speed: Float,
     val isLoading: Boolean,
     var city: String,
-    val timeZone: Long,
+    val timeZone: Int,
 
-)
+    )
 
 sealed class DataEvent: Event {
     object WeatherLoaded: DataEvent()

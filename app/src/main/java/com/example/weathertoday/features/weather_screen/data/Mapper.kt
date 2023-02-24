@@ -1,7 +1,6 @@
 package com.example.weathertoday.features.weather_screen.data
 
 import com.example.weathertoday.features.weather_screen.data.model.MainWeatherRemoteModel
-import com.example.weathertoday.features.weather_screen.data.model.TimeZoneRemoteModel
 import com.example.weathertoday.features.weather_screen.domain.model.*
 
 
@@ -23,14 +22,10 @@ fun MainWeatherRemoteModel.sysToDomain() = SysModel(
     sunrise = this.sys.sunrise,
 )
 
-fun TimeZoneRemoteModel.timeZoneToDomain() = TimeZoneModel(
-    timeZone = this.timeZone.timeZone
-)
-
 fun MainWeatherRemoteModel.toDomain() = MainWeatherModel(
     main = mainToDomain(),
     wind = windToDomain(),
     sys = sysToDomain(),
-    timeZone = timeZoneToDomain(),
+    timeZone = timezone,
     date = date,
 )

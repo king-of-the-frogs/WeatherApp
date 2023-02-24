@@ -24,7 +24,7 @@ class MainViewModel(val iteractor: WeatherIteractor) : BaseViewModel<ViewState>(
             sunrise = 0,
             date = 0,
             isLoading = false,
-            timezone = 0,
+            timeZone = 0,
         )
 
     override fun reduce(event: Event, previousState: ViewState): ViewState? {
@@ -56,7 +56,7 @@ class MainViewModel(val iteractor: WeatherIteractor) : BaseViewModel<ViewState>(
                     sunrise = event.data.sys.sunrise,
                     date = event.data.date,
                     isLoading = true,
-                    timezone = event.data.timezone.timezone,
+                    timeZone = event.data.timeZone,
                 )
             }
             else -> return null

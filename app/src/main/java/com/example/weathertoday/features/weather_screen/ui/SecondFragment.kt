@@ -45,12 +45,14 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
             SimpleDateFormat("hh:mm a", Locale.UK).format(Date(viewState.sunset * 1000))
         binding.updatedAt.text =
             SimpleDateFormat("dd/MM/yyyy hh:mm a", Locale.ENGLISH).format(Date(viewState.date * 1000))
-//        binding.timezone.text =
-//            DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss").ZonedDateTime.now(ZoneId.of(viewState.city))
-        binding.timeZone.text =
-            DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a")ZonedDateTime.now(ZoneId.of(viewState.timeZone)).format(Long)
+        binding.timeZone.text = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a")
+            ZonedDateTime.now(ZoneId.of(viewState.city))
+                .format(viewState.timeZone)
+
+
     }
 
 }
+
 
 
