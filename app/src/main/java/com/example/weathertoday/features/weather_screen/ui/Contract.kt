@@ -21,12 +21,13 @@ data class ViewState(
 
     )
 
+// События, которые могут произойти в процессе загрузки данных
 sealed class DataEvent: Event {
-    object WeatherLoaded: DataEvent()
-    data class OnWeatherSucceed(val data: MainWeatherModel) : DataEvent()
+    object WeatherLoaded: DataEvent() // событие загрузки погоды
+    data class OnWeatherSucceed(val data: MainWeatherModel) : DataEvent() // успешное получение погодных данных
 }
 
+// События, которые могут быть инициированы пользователем
 sealed class UiEvent: Event {
-    data class LoadWeatherFromCity(val city: String): UiEvent()
-
+    data class LoadWeatherFromCity(val city: String): UiEvent() // загрузка погоды для указанного города
 }

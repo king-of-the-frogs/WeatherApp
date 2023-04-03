@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(val iteractor: WeatherIteractor) : BaseViewModel<ViewState>() {
 
-
+    // Переопределение функции initialViewState(), которая возвращает экземпляр класса ViewState со значениями по умолчанию
     override fun initialViewState(): ViewState =
         ViewState(
             temp = 0f,
@@ -29,8 +29,12 @@ class MainViewModel(val iteractor: WeatherIteractor) : BaseViewModel<ViewState>(
 
     override fun reduce(event: Event, previousState: ViewState): ViewState? {
         when (event) {
+
+            // Внутри функции происходит проверка типа event, если это UiEvent.LoadWeatherFromCity, то значение поля city в объекте previousState устанавливается в значение event.city.
             is UiEvent.LoadWeatherFromCity -> {
                 previousState.city = event.city
+
+                // Затем вызывается метод getWeather интерактора с параметром event.city внутри viewModelScope.launch.
                 viewModelScope.launch {
                     iteractor.getWeather(event.city).fold(
                         onError = {
@@ -43,6 +47,8 @@ class MainViewModel(val iteractor: WeatherIteractor) : BaseViewModel<ViewState>(
                 }
                 return null
             }
+
+            // Если тип event равен DataEvent.OnWeatherSucceed, то возвращает новый экземпляр ViewState с обновленными полями, которые присваиваются значениям, полученным из event.data.
             is DataEvent.OnWeatherSucceed -> {
                 return previousState.copy(
                     temp = event.data.main.temp,

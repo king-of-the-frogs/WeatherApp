@@ -10,7 +10,6 @@ import com.example.weathertoday.base.viewBinding
 import com.example.weathertoday.databinding.FragmentSecondBinding
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import java.text.SimpleDateFormat
-import java.time.ZoneId
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
@@ -19,16 +18,21 @@ import java.util.*
 
 class SecondFragment : Fragment(R.layout.fragment_second) {
 
+    // Получение объекта привязки с помощью делегата viewBinding, что упрощает доступ к элементам макета
     private val binding by viewBinding { FragmentSecondBinding.bind(it) }
+
+    // Получение ViewModel, созданной с помощью Koin
     private val viewModel: MainViewModel by sharedViewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Наблюдение за изменением состояния viewState во ViewModel
         viewModel.viewState.observe(viewLifecycleOwner, ::render)
 
     }
 
+    // Обработка изменения состояния viewState
     @SuppressLint("SetTextI18n", "NewApi")
     private fun render(viewState: ViewState) {
         val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a")

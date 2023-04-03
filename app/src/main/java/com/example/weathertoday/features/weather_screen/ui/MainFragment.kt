@@ -11,20 +11,24 @@ import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
+    // Переменная, содержащая привязку ViewBinding к макету фрагмента
     private val binding by viewBinding { FragmentMainBinding.bind(it) }
+
+    // Получение ViewModel, созданной с помощью Koin
     private val viewModel: MainViewModel by sharedViewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnStart.setOnClickListener {
+            // Обработка события загрузки погоды по названию города
             viewModel.processDataEvent(UiEvent.LoadWeatherFromCity(binding.etStart.text.toString()))
             openWeather()
         }
     }
 
+    // Функция для перехода на другой фрагмент
     private fun openWeather() {
         findNavController().navigate(R.id.action_mainFragment_to_secondFragment2)
     }
 }
-
