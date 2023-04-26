@@ -35,10 +35,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             binding.etStart.setTextColor(getResources().getColor(R.color.black));
             binding.btnStart.setTextColor(getResources().getColor(R.color.black));
 
-        } else {
-            binding.etStart.setTextColor(getResources().getColor(R.color.white));
-            binding.btnStart.setTextColor(getResources().getColor(R.color.white));
-
         }
     }
 

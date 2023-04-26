@@ -42,7 +42,7 @@
         android:backgroundTint="#240B7E"
         android:backgroundTintMode="add"
         android:text="@string/search"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -70,8 +70,8 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         ) {
             binding.address.setTextColor(getResources().getColor(R.color.blue2));
             binding.temp.setTextColor(getResources().getColor(R.color.black));
-            binding.tempMax.setTextColor(getResources().getColor(R.color.black));
-            binding.tempMin.setTextColor(getResources().getColor(R.color.black));
+            binding.tempMax.setTextColor(getResources().getColor(R.color.blue3));
+            binding.tempMin.setTextColor(getResources().getColor(R.color.blue3));
             binding.feelsLike.setTextColor(getResources().getColor(R.color.black));
             binding.wind.setTextColor(getResources().getColor(R.color.black));
             binding.pressure.setTextColor(getResources().getColor(R.color.black));
@@ -79,20 +79,6 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
             binding.sunrise.setTextColor(getResources().getColor(R.color.black));
             binding.sunset.setTextColor(getResources().getColor(R.color.black));
             binding.timeZone.setTextColor(getResources().getColor(R.color.blue2));
-            binding.status.setTextAppearance(getResources().getColor(R.color.black));
-        } else {
-            binding.address.setTextColor(getResources().getColor(R.color.white));
-            binding.temp.setTextColor(getResources().getColor(R.color.white));
-            binding.tempMax.setTextColor(getResources().getColor(R.color.white));
-            binding.tempMin.setTextColor(getResources().getColor(R.color.white));
-            binding.feelsLike.setTextColor(getResources().getColor(R.color.white));
-            binding.wind.setTextColor(getResources().getColor(R.color.white));
-            binding.pressure.setTextColor(getResources().getColor(R.color.white));
-            binding.humidity.setTextColor(getResources().getColor(R.color.white));
-            binding.sunrise.setTextColor(getResources().getColor(R.color.white));
-            binding.sunset.setTextColor(getResources().getColor(R.color.white));
-            binding.timeZone.setTextColor(getResources().getColor(R.color.white));
-            binding.status.setTextAppearance(getResources().getColor(R.color.white));
         }
     }
 
