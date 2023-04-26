@@ -26,6 +26,8 @@
         android:layout_height="53dp"
         android:hint="@string/name_city"
         android:textAlignment="gravity"
+        android:shadowColor="@color/white"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

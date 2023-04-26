@@ -1,5 +1,6 @@
 package com.example.weathertoday.features.weather_screen.ui
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -24,6 +25,20 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             // Обработка события загрузки погоды по названию города
             viewModel.processDataEvent(UiEvent.LoadWeatherFromCity(binding.etStart.text.toString()))
             openWeather()
+        }
+
+
+        // Ночная тема
+        if (binding.btnStart.context.resources.configuration.uiMode and
+            Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
+        ) {
+            binding.etStart.setTextColor(getResources().getColor(R.color.black));
+            binding.btnStart.setTextColor(getResources().getColor(R.color.black));
+
+        } else {
+            binding.etStart.setTextColor(getResources().getColor(R.color.white));
+            binding.btnStart.setTextColor(getResources().getColor(R.color.white));
+
         }
     }
 
