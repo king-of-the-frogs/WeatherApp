@@ -28,15 +28,15 @@
                 android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/blue2"
+                android:textColor="@color/white"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/updated_at"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/blue2"
-                android:textSize="14sp" />
+                android:id="@+id/timeZone"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
 
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/clear_sky"
-                android:textColor="@color/black"
+                android:textColor="#4315EC"
                 android:textSize="18sp" />
 
             <TextView
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-thin"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="75sp" />
 
             <LinearLayout
@@ -75,7 +75,7 @@
                     android:id="@+id/temp_min"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#0F0435" />
+                    android:textColor="@color/white" />
 
                 <Space
                     android:layout_width="50dp"
@@ -85,7 +85,7 @@
                     android:id="@+id/temp_max"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#0F0435" />
+                    android:textColor="@color/white" />
             </LinearLayout>
 
         </LinearLayout>
@@ -134,7 +134,7 @@
                         android:id="@+id/wind"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -172,7 +172,7 @@
                         android:id="@+id/sunrise"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -210,7 +210,7 @@
                         android:id="@+id/sunset"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -255,7 +255,7 @@
                         android:id="@+id/pressure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -293,7 +293,7 @@
                         android:id="@+id/feels_like"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -331,7 +331,7 @@
                         android:id="@+id/humidity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>

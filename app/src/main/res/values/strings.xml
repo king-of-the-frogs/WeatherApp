@@ -10,9 +10,10 @@
     <string name="name_city">Write the city:</string>
     <string name="sunrise">Sunrise</string>
     <string name="sunset">Sunset</string>
-    <string name="clear_sky">Clear sky</string>
+    <string name="clear_sky">Хорошего дня!</string>
     <string name="wind">Wind</string>
     <string name="pressure">Pressure</string>
     <string name="humidity">Humidity</string>
     <string name="feels_like">Feels like</string>
+    <string name="timezone">Timezone</string>
     </resources>

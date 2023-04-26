@@ -1,7 +1,7 @@
 package com.example.weathertoday.features.weather_screen.domain.model
 
-data class WindModel(
+data class TimeZoneModel (
 
-    val speed: Float
+    val timeZone: Long,
 
 )
