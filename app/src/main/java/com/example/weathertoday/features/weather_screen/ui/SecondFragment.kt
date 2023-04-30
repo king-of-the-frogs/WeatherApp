@@ -20,7 +20,7 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 
 
-class SecondFragment : Fragment(R.layout.fragment_second) {
+class  SecondFragment : Fragment(R.layout.fragment_second) {
 
     // Получение объекта привязки с помощью делегата viewBinding, что упрощает доступ к элементам макета
     private val binding by viewBinding { FragmentSecondBinding.bind(it) }
@@ -68,17 +68,14 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         if (binding.address.context.resources.configuration.uiMode and
             Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
         ) {
-            binding.address.setTextColor(getResources().getColor(R.color.blue2));
-            binding.temp.setTextColor(getResources().getColor(R.color.black));
-            binding.tempMax.setTextColor(getResources().getColor(R.color.blue3));
-            binding.tempMin.setTextColor(getResources().getColor(R.color.blue3));
-            binding.feelsLike.setTextColor(getResources().getColor(R.color.black));
-            binding.wind.setTextColor(getResources().getColor(R.color.black));
-            binding.pressure.setTextColor(getResources().getColor(R.color.black));
-            binding.humidity.setTextColor(getResources().getColor(R.color.black));
-            binding.sunrise.setTextColor(getResources().getColor(R.color.black));
-            binding.sunset.setTextColor(getResources().getColor(R.color.black));
-            binding.timeZone.setTextColor(getResources().getColor(R.color.blue2));
+            binding.fragment2.setBackgroundResource(R.drawable.gradient_bg2)
+            binding.mainContainer.setBackgroundResource(R.drawable.gradient_bg2)
+            binding.sunriseLayout.setBackgroundColor(R.color.blue4)
+            binding.humidityLayout.setBackgroundColor(R.color.blue4)
+            binding.sunsetLayout.setBackgroundColor(R.color.blue4)
+            binding.pressureLayout.setBackgroundColor(R.color.blue4)
+            binding.feelsLayout.setBackgroundColor(R.color.blue4)
+            binding.windLayout.setBackgroundColor(R.color.blue4)
         }
     }
 

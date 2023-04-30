@@ -3,11 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragment1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".features.weather_screen.ui.MainActivity"
-    android:background="@drawable/gradient_bg">
+    android:background="@drawable/gradient_bg2_light">
 
     <ImageView
+        android:id="@+id/label"
         android:layout_width="170dp"
         android:layout_height="171dp"
         android:src="@drawable/app"
@@ -17,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.568"
-        app:tint="@color/black"
+        app:tint="#7C60DF"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -39,7 +41,7 @@
         android:id="@+id/btnStart"
         android:layout_width="107dp"
         android:layout_height="40dp"
-        android:backgroundTint="#240B7E"
+        android:backgroundTint="#6241D6"
         android:backgroundTintMode="add"
         android:text="@string/search"
         android:textColor="@color/white"

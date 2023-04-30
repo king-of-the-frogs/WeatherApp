@@ -1,6 +1,8 @@
 package com.example.weathertoday.features.weather_screen.ui
 
+import android.annotation.SuppressLint
 import android.content.res.Configuration
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -18,6 +20,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     // Получение ViewModel, созданной с помощью Koin
     private val viewModel: MainViewModel by sharedViewModel()
 
+    @SuppressLint("ResourceAsColor")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -32,9 +35,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         if (binding.btnStart.context.resources.configuration.uiMode and
             Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
         ) {
-            binding.etStart.setTextColor(getResources().getColor(R.color.black));
-            binding.btnStart.setTextColor(getResources().getColor(R.color.black));
-
+            binding.fragment1.setBackgroundResource(R.drawable.gradient_bg2)
+            binding.label.setColorFilter(Color.WHITE)
+            binding.btnStart.setBackgroundColor(Color.BLACK)
         }
     }
 
