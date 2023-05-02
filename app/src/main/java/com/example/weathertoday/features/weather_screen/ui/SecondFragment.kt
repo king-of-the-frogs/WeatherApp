@@ -55,7 +55,7 @@ class  SecondFragment : Fragment(R.layout.fragment_second) {
         binding.temp.text = "${viewState.temp} °C"
         binding.tempMax.text = "${viewState.tempMax} °C"
         binding.tempMin.text = "${viewState.tempMin} °C"
-        binding.feelsLike.text = "${viewState.tempMin} °C"
+        binding.feelsLike.text = "${viewState.feelsLike} °C"
         binding.wind.text = viewState.speed.toString()
         binding.pressure.text = viewState.pressure.toString()
         binding.humidity.text = viewState.humidity.toString()
